@@ -35,7 +35,7 @@ pipeline {
                 sh 'echo this is deply'
             }
         }
-        stage('print params')
+        stage('print params') {
         steps {
             echo "Hello ${params.PERSON}"
 
@@ -47,5 +47,6 @@ pipeline {
 
             echo "Password: ${params.PASSWORD}"
         }
+      }
     }
 }
