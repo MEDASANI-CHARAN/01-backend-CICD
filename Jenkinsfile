@@ -52,7 +52,7 @@ pipeline {
 
             echo "Password: ${params.PASSWORD}"
 
-            bcvn
+            error 'abc'
         }  
       }
     }
