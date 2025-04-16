@@ -64,10 +64,10 @@ pipeline {
         stage('Deploy'){
             steps {
                 script {
-                     build job: '01-backend-deployment', parameters: params, wait: false
                      def params = [
                         string(name: 'appVersion', value: "${appVersion}")
                          ]
+                         build job: '01-backend-deployment', parameters: params, wait: false
                     }
                 }
 
