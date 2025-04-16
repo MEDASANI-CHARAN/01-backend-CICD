@@ -64,7 +64,7 @@ pipeline {
         stage('Deploy'){
             steps {
                     script {
-                         build job: 'backend-deployment1', parameters: [string(name: 'appVersion', value: "${appVersion}")], wait: false
+                         build job: 'backend-deploy', parameters: [string(name: 'appVersion', value: "${appVersion}")], wait: false
                     }
                 }
             }
