@@ -63,11 +63,11 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                script {
                      def params = [
                         string(name: 'appVersion', value: "${appVersion}")
                          ]
-                         build job: '01-backend-deployment-CICD', parameters: params, wait: false
+                    script {
+                         build job: '01-backend-deployment', parameters: params, wait: false
                     }
                 }
             }
