@@ -12,9 +12,8 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 sh ''' 
-                    ls -ltr
                     npm install
-                    
+                    ls -ltr
                 '''
             }
         }
