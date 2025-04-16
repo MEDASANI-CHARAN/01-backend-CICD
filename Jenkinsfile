@@ -12,9 +12,6 @@ pipeline {
         def appVersion = ''
         nexusUrl = 'jenkins-nexus.daws2025.online:8081'
     }
-    parameters {
-        string(name: 'appVersion', defaultValue: '', description: 'What is the application version?')
-    }
     stages {
         stage('read the version'){
             steps {
@@ -70,7 +67,7 @@ pipeline {
                 //       string(name: 'appVersion', value: "${appVersion}")
                 // ]
                     script {
-                         build job: 'backend-deployment', parameters: "${params.appVersion}", wait: false
+                         build job: 'backend-deployment', parameters: [string(name: 'appVersion', value: "${appVersion}")], wait: false
                     }
                 }
             }
