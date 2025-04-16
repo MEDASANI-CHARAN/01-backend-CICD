@@ -58,10 +58,21 @@ pipeline {
                         type: 'zip']
                     ]
                 )
+             }
+          }
         }
+        stage('Deploy'){
+            steps {
+                def params = [
+                        string(name: 'appVersion', value: "${appVersion}")
+                ]
+                script {
+                     build job: '01-backend-deployment', parameters: params, wait: false
+                    }
+                }
+
             }
-        }
-    }
+         }
     post { 
             always { 
                 echo 'I will always say Hello again!'
