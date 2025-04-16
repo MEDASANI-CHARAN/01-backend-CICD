@@ -40,7 +40,7 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Nexus Artifact Upload') {
             steps {
                script {
                     nexusArtifactUploader(
