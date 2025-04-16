@@ -70,7 +70,6 @@ pipeline {
                          build job: '01-backend-deployment', parameters: params, wait: false
                     }
                 }
-
             }
          }
     post { 
