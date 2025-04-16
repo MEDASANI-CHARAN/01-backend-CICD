@@ -11,12 +11,14 @@ pipeline {
     stages {
         stage('Init') {
             steps {
-                sh '''
+                sh ''' 
                     ls -ltr
                     echo this is testing
                 '''
             }
         }
+
+    }
     post { 
             always { 
                 echo 'I will always say Hello again!'
