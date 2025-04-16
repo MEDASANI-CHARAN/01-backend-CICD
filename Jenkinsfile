@@ -13,7 +13,7 @@ pipeline {
         nexusUrl = 'jenkins-nexus.daws2025.online:8081'
     }
     parameters {
-        string(name: 'appVersion', defaultValue: "$appVersion", description: 'What is the application version?')
+        string(name: 'appVersion', defaultValue: '', description: 'What is the application version?')
     }
     stages {
         stage('read the version'){
