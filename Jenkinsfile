@@ -11,7 +11,7 @@ pipeline {
     environment {
         def appVersion = ''
         nexusUrl = 'jenkins-nexus.daws2025.online:8081'
-    }  
+    }
     stages {
         stage('read the version'){
             steps {
