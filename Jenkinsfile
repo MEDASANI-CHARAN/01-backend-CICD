@@ -29,8 +29,8 @@ pipeline {
                     ls -ltr
                     echo "application version: $appVersion"
                 """
-            }
-        }
+            }  
+        }  
         stage('Build') {
             steps {
                 sh """
