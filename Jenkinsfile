@@ -7,7 +7,7 @@ pipeline {
                 timeout(time: 15, unit: 'MINUTES')
                 disableConcurrentBuilds()
                 // ansiColor('xterm')
-            }
+            } 
     environment {
         def appVersion = ''
         nexusUrl = 'jenkins-nexus.daws2025.online:8081'
