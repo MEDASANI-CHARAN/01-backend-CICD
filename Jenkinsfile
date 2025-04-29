@@ -38,7 +38,7 @@ pipeline {
                     ls -ltr
                 """
             }
-        }
+        } 
 
         stage('Nexus Artifact Upload') {
             steps {
