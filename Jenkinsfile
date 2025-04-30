@@ -21,7 +21,7 @@ pipeline {
                 echo "application version: $appVersion"
              }
             }
-        } 
+        }
         stage('Install dependencies') {
             steps {
                 sh """
